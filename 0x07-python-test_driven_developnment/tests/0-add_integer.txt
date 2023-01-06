@@ -1,0 +1,47 @@
+test case for 0-add_integer module
+----------------------------------------
+----------------------------------------
+I will be testing the module with 7 different instance to see how good it is
+
+importing the module for testing
+
+	>>> add_integer =  __import__ ('0-add_integer').add_integer 
+
+
+case 1 scenerio: BOTH IS INTEGER
+	>>> add_integer(1,2)
+	3
+
+case 2 scenerio: ONE IS NEGATIVE INTEGER
+	>>> add_integer(100,-2)
+	98
+
+case 3 scenerio: GIVING ONLY THE A VALUE
+	>>> add_integer(2)
+	100
+
+case 4 scenerio: GIVING ONE OF THE VALUE AS FLOAT
+	>>> add_integer(100.3,-2)
+	98
+
+case 5 scenerio: GIVING BOTH OF THE VALUE AS FLOAT
+	>>> add_integer(50.5,30.3)
+	80
+
+case 6 scenerio: GIVING ONE VALUE AS STRING
+	>>> add_integer(2,'string')
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+case 7 scenerio: GIVING BOTH VALUE AS STRING
+	>>> add_integer('b','yes')
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+case 8 scenerio: GIVING A NULL VALUE
+	>>> add_integer(None)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
