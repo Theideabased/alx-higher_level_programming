@@ -1,0 +1,60 @@
+===================================
+This documentation is used to test the python code 
+===========================================
+in 0-add_integerfor different scenrios
+
+importing the modules from the code
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+CASE 1
+when two integers are added together
+	>>> add_integer(1,2)
+	3
+
+CASE 2
+when a float and a integer is added together
+	>>> add_integer(19.7,6)
+	25
+	
+CASE 3
+when a integer is given
+	>>> add_integer(2)
+	100
+
+CASE 4 
+when a negative integer is given
+	>>> add_integer(-28)
+	70
+
+CASE 5 
+when two float are given
+	>>> add_integer(9.0,7.6)
+	16
+
+CASE 6
+when a null value is given
+	>>> add_integer(None)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+CASE 7
+when both are string
+	>>> add_integer('ade','seyi')
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+CASE 8
+when both are boolean
+	>>> add_integer(True,False)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+CASE 9
+when 'b' is a string
+	>>> add_integer(2,'seyi')
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
