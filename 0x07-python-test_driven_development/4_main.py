@@ -29,3 +29,6 @@ except Exception as e:
         print(e)
 
         print("")
+
+print_square()
+print("")
