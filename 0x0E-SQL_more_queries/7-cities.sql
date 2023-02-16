@@ -1,5 +1,5 @@
-/* this will creates the database hbtn_0d_usa and the table cities
-(in the database hbtn_0d_usa) on your MySQL server. */
+-- this will creates the database hbtn_0d_usa and the table cities
+-- (in the database hbtn_0d_usa) on your MySQL server. 
 CREATE DATABASE IF NOT EXISTS hbtn0d_usa;
 -- use the database
 USE hbtn_0d_usa
