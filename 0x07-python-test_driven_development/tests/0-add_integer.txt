@@ -1,60 +1,65 @@
-===================================
-This documentation is used to test the python code 
-===========================================
-in 0-add_integerfor different scenrios
+=========================================================
+using this document to test the code of 0-add_integers.py
+=========================================================
 
-importing the modules from the code
-	>>> add_integer = __import__('0-add_integer').add_integer
+NUMBERS
+=======
+First let test all kind of numbers to check if it will give us the 
+expected results as programmed
 
-CASE 1
-when two integers are added together
-	>>> add_integer(1,2)
-	3
+::
 
-CASE 2
-when a float and a integer is added together
-	>>> add_integer(19.7,6)
-	25
-	
-CASE 3
-when a integer is given
-	>>> add_integer(2)
-	100
+	>>> __import__(0-add_integer).add_integer
+	>>> add_integer(2,5)
+	10
 
-CASE 4 
-when a negative integer is given
-	>>> add_integer(-28)
-	70
+Let also try float
 
-CASE 5 
-when two float are given
-	>>> add_integer(9.0,7.6)
-	16
+::
 
-CASE 6
-when a null value is given
-	>>> add_integer(None)
+	>>> add_integer(10.5, 3.8)
+	30
+
+::
+
+	>>> add_integer(-80)
+	18
+
+ALPHABETS
+=========
+let try using alphabets to see the result it will produces
+
+::
+
+	>>> add_integer('seyi', 23)
 	Traceback (most recent call last):
 		...
 	TypeError: a must be an integer
 
-CASE 7
-when both are string
-	>>> add_integer('ade','seyi')
-	Traceback (most recent call last):
-		...
-	TypeError: a must be an integer
+let try 'b' to be a string too
 
-CASE 8
-when both are boolean
-	>>> add_integer(True,False)
-	Traceback (most recent call last):
-		...
-	TypeError: a must be an integer
+::
 
-CASE 9
-when 'b' is a string
-	>>> add_integer(2,'seyi')
+	>>> add_integer(10, 'yes')
 	Traceback (most recent call last):
 		...
 	TypeError: b must be an integer
+
+ARRAYS
+=======
+let's trying using some arrays and test them too
+
+::
+
+	>>> add_integer([1,2,3,4], 12)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+::
+
+	>>> add_integer(2, [2,3,4,5])
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+		

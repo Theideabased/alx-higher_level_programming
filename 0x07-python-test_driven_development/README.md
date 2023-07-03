@@ -1,21 +1,13 @@
-#  Testing python codes
-This directory will take you through different ways in testing python code
+This directory will teach you different way of testing your python code
+Testing a code is veey important because it help you check all the functionalities you have written before you deploy the code
 
-There are different types of code testing
-	1. Unit testing
-	2. Functional testing
-	3. Integrated testing
-	4. System testing
-	 and so on
+we will ne using two different way to test our code
+ * docstring
+ * import doctest
 
-This standard presents some set of quality attributes for any software such as:
+Docstring: this was you create a .txt file that will be like a 
+sample to the code you have written and you see the error using 
+tgis code on your prompt "python -m doctest -v file.txt" 
 
-	Functionality
-	Reliability
-	Usability
-	Efficiency
-	Maintainability
-	Portability
-
-so enjoy as you see how I test some simple python codes 
-<https://media.tenor.com/DoZ448qxFScAAAAC/welcome-enjoy.gif>
+Import Doctest: in this case you will import module into your python code that will
+check your documentstion written in your function to test thr function
