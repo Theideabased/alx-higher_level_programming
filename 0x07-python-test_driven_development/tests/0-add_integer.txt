@@ -9,16 +9,16 @@ expected results as programmed
 
 ::
 
-	>>> __import__(0-add_integer).add_integer
+	>>> add_integer=__import__('0-add_integer').add_integer
 	>>> add_integer(2,5)
-	10
+	7
 
 Let also try float
 
 ::
 
 	>>> add_integer(10.5, 3.8)
-	30
+	13
 
 ::
 
