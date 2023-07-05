@@ -1,0 +1,37 @@
+=========================
+Testing say my name code
+============≠============
+
+This code will test my say my name code where it will 
+where it will raise an error if either the last_name is not 
+a string or the first_name is not a string
+
+
+::
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name('John', 'snow')
+	My name is John snow
+
+::
+
+	>>> say_my_name('Jesus', 'Christ')
+	My name is Jesus Christ
+
+::
+
+	>>> say_my_name('Seyi')
+	My name is Seyi 
+
+::
+	>>> say_my_name(12, 'seyman')
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+::
+
+	>>> say_my_name('seyman', 10)
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string

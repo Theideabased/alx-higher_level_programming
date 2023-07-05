@@ -1,0 +1,24 @@
+========================
+Text indentation testing
+========================
+
+Write a function that prints a text with 2 new lines after each of these characters: ., ? and :
+text must be a string, otherwise raise a TypeError exception with the message text must be a string
+
+::
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+	>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?")
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	<BLANKLINE>
+	Quonam modo?
+	<BLANKLINE>
+	Utrum igitur tibi litteram videor an totas paginas commovere?
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation(4)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string

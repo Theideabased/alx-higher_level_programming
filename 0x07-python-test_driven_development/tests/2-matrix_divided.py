@@ -13,8 +13,7 @@ def matrix_divided(matrix, div):
     not be zero
     """
     if not all(isinstance(row, list) and all(isinstance(ele, (int, float)) for ele in row) for row in matrix):
-        raise TypeError('matrix must be a matrix \
-                (list of lists)of integers/floats')
+        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     # making sure all the size of the matrix is equal
     row_length = set(len(row) for row in matrix)
     if len(row_length) > 1:
@@ -24,6 +23,6 @@ def matrix_divided(matrix, div):
         raise TypeError('div must be a number')
     # div must not be zero
     if div == 0:
-        raise ZeroDivisionError('dividion by zero')
-    result = [[(ele / div) for ele in row] for row in matrix]
+        raise ZeroDivisionError('division by zero')
+    result = [[round(ele / div,2) for ele in row] for row in matrix]
     return result

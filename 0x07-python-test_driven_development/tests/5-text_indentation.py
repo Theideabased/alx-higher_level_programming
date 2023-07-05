@@ -15,4 +15,4 @@ def text_indentation(text):
     punctuation_mark = ['.', '?', ':']
     for char in text:
         if char in punctuation_mark:
-            print("\n" * 2, end="")
+            print(f"{text\n}" * 2, end="")
