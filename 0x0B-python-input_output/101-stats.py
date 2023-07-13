@@ -2,32 +2,42 @@
 import sys
 from collections import defaultdict
 
-# Initialize metrics variables
+# Initialize variables
 total_file_size = 0
-status_code_counts = defaultdict(int)
+status_counts = defaultdict(int)
+line_count = 0
 
-# Process lines from stdin
 try:
-    for i, line in enumerate(sys.stdin, start=1):
-        # Parse the line and extract relevant information
-        parts = line.strip().split()
-        ip_address = parts[0]
-        status_code = parts[-2]
-        file_size = int(parts[-1])
+    # Read input line by line from stdin
+    for line in sys.stdin:
+        # Split the line into fields
+        fields = line.strip().split()
 
-        # Update metrics
+        # Update total file size
+        file_size = int(fields[-1])
         total_file_size += file_size
-        status_code_counts[status_code] += 1
+
+        # Update status code counts
+        status_code = fields[-2]
+        status_counts[status_code] += 1
+
+        # Increment line count
+        line_count += 1
 
         # Print statistics every 10 lines
-        if i % 10 == 0:
-            print("Total file size:", total_file_size)
-            for code in sorted(status_code_counts.keys()):
-                print(f"{code}: {status_code_counts[code]}")
+        if line_count % 10 == 0:
+            print(f"Total file size: {total_file_size}")
 
+            # Print status code counts in ascending order
+            for code in sorted(status_counts.keys()):
+                count = status_counts[code]
+                print(f"{code}: {count}")
+
+# Handle keyboard interruption (CTRL + C)
 except KeyboardInterrupt:
-    # Handle keyboard interruption (CTRL + C)
-    print("Total file size:", total_file_size)
-    for code in sorted(status_code_counts.keys()):
-        print(f"{code}: {status_code_counts[code]}")
+    print(f"\nTotal file size: {total_file_size}")
 
+    # Print status code counts in ascending order
+    for code in sorted(status_counts.keys()):
+        count = status_counts[code]
+        print(f"{code}: {count}")
