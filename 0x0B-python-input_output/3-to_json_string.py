@@ -8,5 +8,9 @@ import json
 
 
 def to_json_string(my_obj):
+    """
+    Args:
+        my_obj(json)
+    """
     result = json.dumps(my_obj)
     return result

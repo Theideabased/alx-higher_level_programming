@@ -8,5 +8,9 @@ import json
 
 
 def from_json_string(my_str):
+    """
+    Args:
+        my_str(str)
+    """
     result = json.loads(my_str)
     return result

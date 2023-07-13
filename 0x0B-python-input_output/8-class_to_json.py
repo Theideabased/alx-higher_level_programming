@@ -18,4 +18,3 @@ def class_to_json(obj):
         return obj
     else:
         return {attr: class_to_json(getattr(obj, attr)) for attr in dir(obj) if not attr.startswith('__')}
-
