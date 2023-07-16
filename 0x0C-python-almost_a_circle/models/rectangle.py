@@ -62,3 +62,12 @@ class Rectangle(Base):
     def area(self):
         result = self__width * self__heigth
         return result
+    @property
+    def display(self):
+        """
+        this will display the rectangle in form
+        of # on the command line 
+        all variableust be integer
+        """
+        for i in range(self.__height):
+            print(self.__width * "#")
