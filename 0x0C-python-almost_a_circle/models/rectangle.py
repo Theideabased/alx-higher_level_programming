@@ -60,6 +60,9 @@ class Rectangle(Base):
             self.__y = y
     @property
     def area(self):
+        """ this will return the are if the rectangle
+        from the height and width
+        """
         result = self__width * self__heigth
         return result
     @property
@@ -69,8 +72,10 @@ class Rectangle(Base):
         of # on the command line 
         all variableust be integer
         """
+        print("\n" * self.__y)
         for i in range(self.__height):
-            print(self.__width * "#")
+            print(self.__x * " " + self.__width * "#")
+    @property
     def __str__(self):
         """
         this is to write the string of a
@@ -78,3 +83,16 @@ class Rectangle(Base):
         """
         return f"[Rectangle] {self.__x}/{self.__y} \
                 - {self.__width}/{self.__height}"
+    @property
+    def update(self, *args):
+        """
+        using *args when giving and unknown
+        keyword variable
+        """
+        first_arg = self.id
+        second_arg = self.__width
+        third_arg = self.__height
+        fourth_arg = self.__x
+        fifth_arg = self.__y
+        print(f"[Rectangle] ({first_arg}) {second_arg}/{third_arg} \
+                - {fourth_arg}/{fifth_arg})
