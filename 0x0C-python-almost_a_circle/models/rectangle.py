@@ -16,10 +16,12 @@ class Rectangle(Base):
         self.y = y
     @property
     def width(self):
+        """ the getter """
         return self.__width
     @width.setter
     def width(self, width):
-        if not isinstance(self.__width, int):
+        """ the width setter """
+        if not isinstance(5self.__width, int):
             raise TypeError('width must be an integer')
         elif self.__width <= 0:
             raise ValueError('width must be > 0')
@@ -27,9 +29,11 @@ class Rectangle(Base):
             self.__width = width
     @property
     def height(self):
+        """ height getter """
         return self.__height
     @height.setter
     def height(self, height):
+        """ height setter """
         if not isinstance(self.__height, int):
             raise TypeError('height must be an integer')
         elif self.__height <= 0:
@@ -38,9 +42,11 @@ class Rectangle(Base):
             self.__height = height
     @property
     def x(self):
+        """ x getter """
         return self.__x
     @x.setter
     def x(self, x):
+        """ x setter """
         if not isinstance(self.__x, int):
             raise TypeError('x must be an integer')
         elif self__x < 0:
@@ -49,9 +55,11 @@ class Rectangle(Base):
             self.__x = x
     @property
     def y(self):
+        """ y getter """
         return self.__y
     @y.setter
     def y(self,y):
+        """ y setter """
         if not isinstance(self.__x, int):
             raise TypeError('x must be an integer')
         elif self__x < 0:
@@ -89,10 +97,6 @@ class Rectangle(Base):
         using *args when giving and unknown
         keyword variable
         """
-        first_arg = self.id
-        second_arg = self.__width
-        third_arg = self.__height
-        fourth_arg = self.__x
-        fifth_arg = self.__y
-        print(f"[Rectangle] ({first_arg}) {second_arg}/{third_arg} \
-                - {fourth_arg}/{fifth_arg})
+        for arg in args:
+            print(f"[Rectangle] ({arg}) {arg}/{arg} \
+                - {arg}/{arg})
