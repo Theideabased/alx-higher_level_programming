@@ -92,11 +92,15 @@ class Rectangle(Base):
         return f"[Rectangle] {self.__x}/{self.__y} \
                 - {self.__width}/{self.__height}"
     @property
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         using *args when giving and unknown
         keyword variable
         """
         for arg in args:
             print(f"[Rectangle] ({arg}) {arg}/{arg} \
-                - {arg}/{arg})
+                - {arg}/{arg}")
+        for kwarg in kwargs:
+            print(f"[Rectangle] ({id=self.__id}) \
+                    {width=self.__width}/{height=self.__height} \
+                    - {x=self.__x}/{y=self.__y}")
