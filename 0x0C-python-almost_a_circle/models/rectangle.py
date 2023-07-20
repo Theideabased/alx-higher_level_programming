@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-""" Reactangle class from Base class """
+""" Rectangle class from Base class """
 from base import Base
 
+
 class Rectangle(Base):
-    """ Rectamgle inherited from Base """
+    """
+    Rectangle inherited from Base
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         width(int), height(int), x(int), y(int)
@@ -14,10 +17,12 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
     @property
     def width(self):
         """ the getter """
         return self.__width
+
     @width.setter
     def width(self, width):
         """ the width setter """
@@ -27,10 +32,12 @@ class Rectangle(Base):
             raise ValueError('width must be > 0')
         else:
             self.__width = width
+
     @property
     def height(self):
         """ height getter """
         return self.__height
+
     @height.setter
     def height(self, height):
         """ height setter """
@@ -40,10 +47,12 @@ class Rectangle(Base):
             raise ValueError('height must be > 0')
         else:
             self.__height = height
+
     @property
     def x(self):
         """ x getter """
         return self.__x
+
     @x.setter
     def x(self, x):
         """ x setter """
@@ -53,12 +62,14 @@ class Rectangle(Base):
             raise ValueError('x must be >= 0')
         else:
             self.__x = x
+
     @property
     def y(self):
         """ y getter """
         return self.__y
+
     @y.setter
-    def y(self,y):
+    def y(self, y):
         """ y setter """
         if not isinstance(y, int):
             raise TypeError('y must be an integer')
@@ -66,6 +77,7 @@ class Rectangle(Base):
             raise ValueError('y must be >= 0')
         else:
             self.__y = y
+
     @property
     def area(self):
         """ this will return the are if the rectangle
@@ -73,21 +85,23 @@ class Rectangle(Base):
         """
         result = self__width * self__heigth
         return result
+
     @property
     def display(self):
         """
         this will display the rectangle in form
-        of # on the command line 
+        of # on the command line
         all variableust be integer
         """
         print("\n" * self.__y)
         for i in range(self.__height):
             print(self.__x * " " + self.__width * "#")
+
     @property
     def __str__(self):
         """
         this is to write the string of a
-        given word 
+        given word
         """
         return f"[Rectangle] {self.__x}/{self.__y} \
                 - {self.__width}/{self.__height}"
