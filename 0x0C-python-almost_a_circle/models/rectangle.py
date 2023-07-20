@@ -9,7 +9,7 @@ class Rectangle(Base):
         width(int), height(int), x(int), y(int)
         id is from Base
         """
-        Base.__init__(self, id=None)
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
