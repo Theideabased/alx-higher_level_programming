@@ -85,8 +85,7 @@ class Rectangle(Base):
 
         Args:(width and height)
         """
-        result = self.__width * self.__height
-        return result
+        return self.width * self.height
 
     @property
     def display(self):
