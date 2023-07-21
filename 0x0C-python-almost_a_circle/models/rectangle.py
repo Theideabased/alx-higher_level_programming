@@ -101,5 +101,5 @@ class Rectangle(Base):
         this is to write the string of a
         given word
         """
-        return f"[Rectangle] {self.__x}/{self.__y} \
-                - {self.__width}/{self.__height}"
+        return (f"[Rectangle] ({self.__id})  {self.__x}/{self.__y} \
+                - {self.__width}/{self.__height}")
