@@ -82,8 +82,10 @@ class Rectangle(Base):
     def area(self):
         """ this will return the are if the rectangle
         from the height and width
+
+        Args:(width and height)
         """
-        result = self.width * self.heigth
+        result = self.__width * self.__height
         return result
 
     @property
