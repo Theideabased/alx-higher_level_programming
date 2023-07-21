@@ -78,16 +78,14 @@ class Rectangle(Base):
         else:
             self.__y = y
 
-    @property
     def area(self):
         """ this will return the are if the rectangle
         from the height and width
 
         Args:(width and height)
         """
-        return self.width * self.height
+        return self.__width * self.__height
 
-    @property
     def display(self):
         """
         this will display the rectangle in form
@@ -98,7 +96,6 @@ class Rectangle(Base):
         for i in range(self.__height):
             print(self.__x * " " + self.__width * "#")
 
-    @property
     def __str__(self):
         """
         this is to write the string of a
