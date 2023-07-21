@@ -83,7 +83,7 @@ class Rectangle(Base):
         """ this will return the are if the rectangle
         from the height and width
         """
-        result = self__width * self__heigth
+        result = self.__width * self.__heigth
         return result
 
     @property
