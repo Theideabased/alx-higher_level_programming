@@ -48,7 +48,7 @@ class Base:
                 dictionary = obj.to_dictionary()
                 list_dictionaries.append(dictionary)
             json_string = Base.to_json_string(list_dictionaries)
-        with open(filename, 'w') ad f:
+        with open(filename, 'w') as f:
             if list_objs in None:
                 f.write("[]")
             else:
@@ -92,9 +92,9 @@ class Base:
                 for item in dictionary_list:
                     instance = cls.create(**item)
                     instance_list.append(instance)
-            except FileNotFoundError:
-                return instance_list
+        except FileNotFoundError:
             return instance_list
+        return instance_list
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
