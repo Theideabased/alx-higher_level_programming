@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """ square class """
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -46,7 +46,7 @@ class Square(Rectangle):
         *args: list of arguments.
         """
         dict_order = ['id', 'size', 'x', 'y']
-        if args id not None and bool(args) is True:
+        if args is not None and bool(args) is True:
             i = 0
             for key in dict_order:
                 try:
