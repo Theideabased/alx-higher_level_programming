@@ -1,5 +1,4 @@
 -- this will creaye a table and the attribute with rows of the attribute
-USE hbtn_0c_0
 CREATE TABLE IF NOT EXISTS second_table(
 	id INT,
 	name VARCHAR(256),
