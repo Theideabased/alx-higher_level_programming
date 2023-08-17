@@ -1,0 +1,1 @@
+-- creating a table where name cannot be null

@@ -1,0 +1,1 @@
+-- A table where state cannot be null

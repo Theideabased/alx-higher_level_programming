@@ -1,0 +1,1 @@
+-- creating a column where id is unique

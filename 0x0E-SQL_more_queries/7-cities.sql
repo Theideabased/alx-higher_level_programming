@@ -1,0 +1,1 @@
+-- A table where state id is a foreign key

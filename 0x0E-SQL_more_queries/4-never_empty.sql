@@ -1,0 +1,1 @@
+-- creating a table where id cannot be null

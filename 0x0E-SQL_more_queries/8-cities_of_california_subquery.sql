@@ -1,0 +1,1 @@
+-- A table where city is joined
