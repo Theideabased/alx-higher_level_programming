@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ this is a class that inherit from Base that will be link to mysql
 database using the ORM format """
 
