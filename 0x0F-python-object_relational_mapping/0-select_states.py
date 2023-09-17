@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ this will will display all the states in the database
 hbtn_0e_0_usa using MySQLdb"""
 
