@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ this will print all the states that start
 with N in the database hbtn_0e_0_usa"""
 

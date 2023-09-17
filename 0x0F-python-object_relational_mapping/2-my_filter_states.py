@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """  this will take and argument and print out
 the table that resemble the argument"""
 

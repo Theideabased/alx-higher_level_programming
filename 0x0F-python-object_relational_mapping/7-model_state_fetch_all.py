@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ listing all the state from the hbtn_0e_6_usa """
 
 # importing the needed library

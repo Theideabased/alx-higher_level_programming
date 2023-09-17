@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ this code will print all in cities from the hbtn_0e_4_usa
 database"""
 
