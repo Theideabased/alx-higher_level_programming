@@ -24,9 +24,4 @@ class State(Base):
     id = Column(Integer, primary_key=True)
     name = Column('name', String(128))
     
-    def __init__(self, id, name):
-        """ initalizing the class atribute """
-        self.id = id
-        self.name = name
-session.commit()
 session.close()

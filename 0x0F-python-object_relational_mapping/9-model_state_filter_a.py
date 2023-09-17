@@ -14,11 +14,6 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # writing my query with python object oriented programming
-result = session.query(State).order_by(State.id).first()
-
-# printing nothing if the table is empty
-if result is None:
-    print('Nothing')
-else:
-    print(f'{result.id}: {result.name}')
+for state in session.query(State).order_by(State.id).all():
+    print(f"{state.id}: {state.name}")
 session.close()
