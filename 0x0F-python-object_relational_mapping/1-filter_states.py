@@ -10,7 +10,7 @@ if __name__ == "__main__":
                            db=argv[3], charset="utf8", port=3306)
     cur = conn.cursor()
     cur.execute("SELECT * FROM states ORDER BY states.id ASC \
-                WHERE name LIKE 'N%';")
+                WHERE name LIKE 'N%'")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
