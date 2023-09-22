@@ -13,8 +13,8 @@ if __name__ == '__main__':
     cur = conn.cursor()
 
     # executing my sql code
-    cur.execute(f"SELECT * FROM states WHERE name LIKE BINARY '{argv[4]}'\
-            ORDER BY states.id ASC")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
+            ORDER BY states.id ASC".format(argv[4]))
     query_row = cur.fetchall()
     for row in query_row:
         print(row)
