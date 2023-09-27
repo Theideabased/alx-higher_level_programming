@@ -7,20 +7,22 @@ from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-# connecting to mysql database
-engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                       .format(argv[1], argv[3], argv[3]),
-                       pool_pre_ping=True)
-Base.metadata.create_all(engine)
-Session = sessionmaker(bind=engine)
-session = Session()
+if __name__ == "__main__":
 
-# writing my query with python object oriented programming
-result = session.query(State).order_by(State.id).first()
+    # connecting to mysql database
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(argv[1], argv[3], argv[3]),
+                           pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-# printing nothing if the table is empty
-if result is None:
-    print('Nothing')
-else:
-    print(f'{result.id}: {result.name}')
-session.close()
+    # writing my query with python object oriented programming
+    result = session.query(State).order_by(State.id).first()
+
+    # printing nothing if the table is empty
+    if result is None:
+        print('Nothing')
+    else:
+        print(f'{result.id}: {result.name}')
+    session.close()
