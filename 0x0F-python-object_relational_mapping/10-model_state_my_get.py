@@ -7,20 +7,20 @@ from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-# connecting to mysql database
-engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                       .format(argv[1], argv[2], argv[3]),
-                       pool_pre_ping=True)
-Base.metadata.create_all(engine)
-Session = sessionmaker(bind=engine)
-session = Session()
+if __name__ == '__main__':
 
-# writing my query with python object oriented programming
-if argv[4] is not None:
-    state = session.query(State).filter(State.name==argv[4])\
-            .first()
-    if state:
-        print(f"{state.id}")
-    else:
+    # connecting to mysql database
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(argv[1], argv[2], argv[3]),
+                           pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    # writing my query with python object oriented programming
+    instance = session.query(State).filter(State.name == (argv[4],))
+    try:
+        print(instance[0].id)
+    except IndexError:
         print("Not found")
-session.close()
+    session.close()
