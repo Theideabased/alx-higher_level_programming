@@ -16,9 +16,9 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     # add the new state
-    new_state = State(name = "Louisiana")
+    new_state = State(name="Louisiana")
     session.add(new_state)
 
     # writing my query with python object oriented programming
