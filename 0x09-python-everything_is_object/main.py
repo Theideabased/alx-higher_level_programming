@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-l1 = [1, 2, 3]
-l2 = l1
-l1.append(4)
-print(l2)
+def magic_string():
+    i += 1
+    return "best school" 
+
+for i in range(10):
+    print (magic_string())
